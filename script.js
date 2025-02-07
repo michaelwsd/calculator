@@ -20,7 +20,8 @@ numbers_btn.forEach((button) => {
 function addNumber(number) {
     if (full_clear) clear();
     if (reset) resetScreen();
-    if (result.textContent == "0") result.textContent = number;
+    if (result.textContent == "0" && number != ".") result.textContent = number;
+    else if (result.textContent == "0" && number == ".") result.textContent += number;
     else if (result.textContent != "0") result.textContent += number;
 }
 
