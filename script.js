@@ -40,7 +40,7 @@ function clear() {
 delete_btn.addEventListener("click", () => deleteButton());
 
 function deleteButton() {
-    if (result.textContent.length == 1) result.textContent = "0";
+    if (result.textContent.length == 1 || result.textContent == "NaN") result.textContent = "0";
     else result.textContent = result.textContent.slice(0, -1);
 }
 
